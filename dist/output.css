@@ -506,17 +506,37 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.absolute{
+  position: absolute;
+}
+
+.relative{
+  position: relative;
+}
+
+.left-1{
+  left: 0.25rem;
+}
+
+.top-1{
+  top: 0.25rem;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
-}
-
-.-ml-3{
-  margin-left: -0.75rem;
-}
-
-.-ml-5{
-  margin-left: -1.25rem;
 }
 
 .-ml-6{
@@ -541,6 +561,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: max-content;
 }
 
+.h-8{
+  height: 2rem;
+}
+
+.h-full{
+  height: 100%;
+}
+
+.h-6{
+  height: 1.5rem;
+}
+
 .w-full{
   width: 100%;
 }
@@ -555,16 +587,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 18rem;
 }
 
+.w-12{
+  width: 3rem;
+}
+
+.w-6{
+  width: 1.5rem;
+}
+
 .max-w-\[230px\]{
   max-width: 230px;
 }
 
-.max-w-\[370px\]{
-  max-width: 370px;
-}
-
 .max-w-\[586px\]{
   max-width: 586px;
+}
+
+.max-w-\[370px\]{
+  max-width: 370px;
 }
 
 .max-w-\[611px\]{
@@ -591,10 +631,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: center;
 }
 
-.justify-between{
-  justify-content: space-between;
-}
-
 .justify-around{
   justify-content: space-around;
 }
@@ -615,16 +651,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 0.5rem;
 }
 
-.gap-5{
-  gap: 1.25rem;
-}
-
-.gap-1{
-  gap: 0.25rem;
-}
-
 .gap-14{
   gap: 3.5rem;
+}
+
+.gap-5{
+  gap: 1.25rem;
 }
 
 .gap-y-10{
@@ -657,16 +689,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 9999px;
 }
 
-.rounded{
-  border-radius: 0.25rem;
-}
-
 .border-2{
   border-width: 2px;
-}
-
-.border{
-  border-width: 1px;
 }
 
 .border-t-2{
@@ -729,8 +753,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(233 58 125 / var(--tw-bg-opacity));
 }
 
+.bg-dark-violet{
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 14 98 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-50{
   --tw-bg-opacity: 0.5;
+}
+
+.bg-opacity-40{
+  --tw-bg-opacity: 0.4;
 }
 
 .bg-pricing04{
@@ -745,16 +778,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 0.75rem;
 }
 
-.p-10{
-  padding: 2.5rem;
-}
-
 .p-14{
   padding: 3.5rem;
-}
-
-.p-5{
-  padding: 1.25rem;
 }
 
 .px-5{
@@ -821,10 +846,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pl-2{
   padding-left: 0.5rem;
-}
-
-.pl-1{
-  padding-left: 0.25rem;
 }
 
 .pr-2{
@@ -923,8 +944,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 0.7;
 }
 
+.transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-200{
   transition-duration: 200ms;
+}
+
+.duration-500{
+  transition-duration: 500ms;
 }
 
 .divider {
@@ -969,6 +1000,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   letter-spacing: 2px;
 }
 
+.switchers .input {
+  background-image: url("./icons/switcher-off.svg");
+}
+
 .hover\:border-dark-violet:hover{
   --tw-border-opacity: 1;
   border-color: rgb(30 14 98 / var(--tw-border-opacity));
@@ -1007,6 +1042,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:text-pink:hover{
   --tw-text-opacity: 1;
   color: rgb(233 58 125 / var(--tw-text-opacity));
+}
+
+.peer:checked ~ .peer-checked\:left-5{
+  left: 1.25rem;
+}
+
+.peer:checked ~ .peer-checked\:bg-green{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 218 197 / var(--tw-bg-opacity));
+}
+
+.peer:checked ~ .peer-checked\:bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px){

@@ -1,3 +1,5 @@
+const theme = require('tailwindcss/defaulttheme')
+
 module.exports = {
   content: ["./index.html"],
   theme: {
@@ -25,5 +27,6 @@ module.exports = {
     },
   },
   plugins: [
+    require('@tailwindcss/forms'),
   ],
 }

@@ -23,3 +23,7 @@
 .name-01 {
     @apply text-sm font-bold tracking-[2px] uppercase
 }
+
+.switchers .input {
+    background-image: url("./icons/switcher-off.svg");
+}
